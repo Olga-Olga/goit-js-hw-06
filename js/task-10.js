@@ -24,7 +24,7 @@ function handlerButtonDraw() {
     return;
   }
 
-  if (inputElement.value > 100) {
+  if (inputElement.value > 100 || inputElement.value < 0) {
     alert("Enter < 100")
     return;
   }
