@@ -5,18 +5,17 @@ form.addEventListener("submit", callback)
 
 function callback(event) {
     event.preventDefault();
-    const thisElements = event.target.elements
+    const {email, password} = event.target.elements
 
-    console.dir(event.target);
-    if (thisElements.email.value === "" || thisElements.password.value === "") //незаповнені поля 
+     if (email.value === "" || password.value === "") //незаповнені поля 
     {
         alert("все поля должны быть заполнены");
         return;
     }
 
     const inpotObj = {
-        email: thisElements.email.value,
-        password: thisElements.password.value
+        email: email.value,
+        password: password.value
     }
     
 
